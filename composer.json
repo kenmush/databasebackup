@@ -1,0 +1,38 @@
+{
+    "name": "mutisya/dbbackup",
+    "description": "Database backup via mail with notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kennedy Mutisya",
+            "email": "ken.msh@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mutisya\\DatabaseBackup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mutisya\\DatabaseBackup\\Tests\\": "tests"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^5.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mutisya\\DatabaseBackup\\BackupServiceProvider"
+            ],
+            "aliases": {
+                "Backup": "Mutisya\\DatabaseBackup\\Facades\\Backup"
+            }
+        }
+    }
+}
